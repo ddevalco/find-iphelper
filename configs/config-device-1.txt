@@ -1,0 +1,67 @@
+hostname TestSwitch2
+interface Vlan25
+ ip address 10.16.8.4 255.255.252.0
+ ip access-group 139 in
+ ip access-group 139 out
+ ip helper-address 10.15.16.13
+ ip helper-address 10.15.16.14
+ no ip redirects
+ no ip unreachables
+ standby 10 ip 10.16.8.1
+ standby 10 preempt
+!
+interface Vlan27
+ ip address 10.14.192.4 255.255.252.0
+ ip access-group 139 in
+ ip access-group 139 out
+ ip helper-address 10.15.16.13
+ ip helper-address 10.15.16.14
+ no ip redirects
+ no ip unreachables
+ standby 10 ip 10.14.192.1
+ standby 10 preempt
+!
+interface Vlan212
+ ip address 10.15.38.4 255.255.255.0
+ ip access-group 139 in
+ ip access-group 139 out
+ no ip redirects
+ no ip unreachables
+ shutdown
+ standby 10 ip 10.15.38.1
+ standby 10 preempt
+!
+interface Vlan213
+ ip address 10.15.28.4 255.255.252.0
+ ip access-group 139 in
+ ip access-group 139 out
+ ip helper-address 10.15.16.13
+ ip helper-address 10.15.16.14
+ no ip redirects
+ no ip unreachables
+ standby 10 ip 10.15.28.1
+ standby 10 preempt
+!         
+interface Vlan214
+ ip address 10.15.39.4 255.255.255.0
+ ip access-group 139 in
+ ip access-group 139 out
+ ip helper-address 10.15.16.13
+ ip helper-address 10.15.16.14
+ no ip redirects
+ no ip unreachables
+ shutdown
+ standby 10 ip 10.15.39.1
+ standby 10 preempt
+!
+interface Vlan215
+ ip address 10.15.48.4 255.255.252.0
+ ip access-group 139 in
+ ip access-group 139 out
+ ip helper-address 10.15.16.13
+ ip helper-address 10.15.16.14
+ no ip redirects
+ no ip unreachables
+ standby 10 ip 10.15.48.1
+ standby 10 priority 110
+ standby 10 preempt
