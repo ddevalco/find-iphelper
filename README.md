@@ -16,3 +16,7 @@ interfacename
 ip helper-address my.new.ip.add
 
 It will save each new config file using hostname+_newconfig.txt
+
+The folder "configs" in the repo contains sample configs for testing
+These are not necessary for download. Use your own and specify own
+folder in script of course.
